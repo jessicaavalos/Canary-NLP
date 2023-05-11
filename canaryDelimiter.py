@@ -9,7 +9,7 @@ Expects the following format: "note" [tab]1[tab] noteID
 
 import sys
 
-if len(sys.argv) > 1:
+if len(sys.argv) == 3:
     input_file = sys.argv[1]
     output_file = sys.argv[2]
 else: 
