@@ -2,7 +2,7 @@
 Author: Jessica Avalos
 Date: 7/12/2023
 Description: This script will apply the bariatric surgery output criteria rules to a csv file with
-canary results. The canary results file should have the columns noteid,outputcriteria. (case sensitive)
+canary results. The canary results file should have the columns DocumentID,OutputCriteria. (case sensitive)
 """
 import csv
 
@@ -41,11 +41,11 @@ with open('cohort.csv', 'r', encoding='utf-8-sig') as f:
 
 # Process the data
 for row in data:
-    row['result'] = process_criteria(row['outputcriteria'])
+    row['NLP Status'] = process_criteria(row['OutputCriteria'])
 
 # Write the output CSV file
 with open('bariatric_cohort.csv', 'w', newline='') as f:
-    fieldnames = ['noteid', 'outputcriteria', 'result'] 
+    fieldnames = ['DocumentID', 'OutputCriteria', 'NLP Status'] 
     writer = csv.DictWriter(f, fieldnames=fieldnames)
 
     writer.writeheader()
