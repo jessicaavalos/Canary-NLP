@@ -1,8 +1,4 @@
 # Canary-NLP
-Script that adds the canary delimiter to input files. 
-
-Usage: python3 canaryDelimiter.py in.txt out.txt. 
-
-Expects the following input file format (utf8 encoding): "note" [tab]1[tab] noteID
+This repository contains a set of tools specifically designed to facilitate file processing, assist with NLP assignments, and enable analysis according to user-defined rules within the Canary platform
 
 https://canary.bwh.harvard.edu
